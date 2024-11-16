@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="todo-container">
+    <div class="header">
+      <h1>To-Do List</h1>
+      <button id="sort-btn" class="sort-btn" onclick="toggleSort()">⇅</button>
+    </div>
+    <ul id="todo-list">
+      
+    </ul>
+    <div class="add-container">
+      <div id="input-container" style="display: none;">
+        <input type="text" id="new-task-input" placeholder="Tapşırıq əlavə edin">
+      </div>
+      <button id="add-toggle-btn" class="combined-add-btn" onclick="addOrToggleInput()">
+        <span class="add-circle">+</span>
+        <span class="add-text">Əlavə et</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
