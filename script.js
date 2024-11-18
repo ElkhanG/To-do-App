@@ -73,6 +73,8 @@ function deleteTask(index) {
 }
 
 function toggleSort() {
+  const sortBtn = document.getElementById('sort-btn');
+
   if (currentSortState === 0) {
     tasks.sort((a, b) => a.localeCompare(b));
     currentSortState = 1;
@@ -83,6 +85,13 @@ function toggleSort() {
     tasks = [...taskOrder];
     currentSortState = 0;
   }
+
+  if (currentSortState === 1 || currentSortState === 2) {
+    sortBtn.classList.add('reverse');
+  } else {
+    sortBtn.classList.remove('reverse');
+  }
+
   renderTasks();
 }
 
