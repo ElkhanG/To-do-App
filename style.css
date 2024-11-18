@@ -71,6 +71,20 @@ body {
     cursor: grab;
 }
 
+.task-content {
+    display: flex;
+    align-items: center;
+}
+
+.task-number {
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.task-text {
+    word-break: break-word;
+}
+
 .delete-btn {
     background: none;
     border: none;

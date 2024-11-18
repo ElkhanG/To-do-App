@@ -39,15 +39,26 @@ function renderTasks() {
     listItem.draggable = true;
     listItem.setAttribute('data-index', index);
 
+    const taskContent = document.createElement('div');
+    taskContent.className = 'task-content';
+
+    const taskNumber = document.createElement('span');
+    taskNumber.className = 'task-number';
+    taskNumber.textContent = `${index + 1}.`;
+
     const taskText = document.createElement('span');
+    taskText.className = 'task-text';
     taskText.textContent = task;
+
+    taskContent.appendChild(taskNumber);
+    taskContent.appendChild(taskText);
 
     const deleteBtn = document.createElement('button');
     deleteBtn.className = 'delete-btn';
     deleteBtn.textContent = '×';
     deleteBtn.onclick = () => deleteTask(index);
 
-    listItem.appendChild(taskText);
+    listItem.appendChild(taskContent);
     listItem.appendChild(deleteBtn);
     todoList.appendChild(listItem);
 
